@@ -1,0 +1,11 @@
+INSERT INTO category (description) VALUES ('Backend');
+INSERT INTO category (description) VALUES ('Frontend');
+INSERT INTO category (description) VALUES ('UX/UI');
+INSERT INTO category (description) VALUES ('ML/BI');
+INSERT INTO category (description) VALUES ('DevOps');
+INSERT INTO category (description) VALUES ('QA');
+INSERT INTO category (description) VALUES ('Non-tech courses');
+INSERT INTO source (source) VALUES ('Udemy');
+INSERT INTO source (source) VALUES ('Pluralsight');
+INSERT INTO source (source) VALUES ('YAKSS');
+INSERT INTO source (source) VALUES ('lighting Talks');

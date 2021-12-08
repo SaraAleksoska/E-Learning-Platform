@@ -28,4 +28,11 @@ public class Course {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "course")
     private Set<Category> categories = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "course_users",
+            joinColumns = @JoinColumn(name = "course_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private Set<User> users = new HashSet<>();
+
 }
