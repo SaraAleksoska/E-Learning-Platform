@@ -19,6 +19,7 @@ public class CourseCommand {
     private String teacher;
     private String skill_level;
     private Integer lectures;
+    private Integer progress;
     private SourceType sourceType;
     private Set<CategoryCommand> categories = new HashSet<>();
     private Set<SourceCommand> sources = new HashSet<>();

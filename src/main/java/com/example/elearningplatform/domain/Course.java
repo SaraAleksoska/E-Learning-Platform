@@ -19,6 +19,7 @@ public class Course {
     private String teacher;
     private String skill_level;
     private Integer lectures;
+    private Integer progress;
 
     @Enumerated(value = EnumType.STRING)
     private SourceType sourceType;

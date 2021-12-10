@@ -20,6 +20,7 @@ public class CourseController {
     public CourseController(CourseService courseService) {
         this.courseService = courseService;
     }
+
     @GetMapping("/course/{id}/show")
     public String showById(@PathVariable String id, Model model){
         model.addAttribute("course", courseService.findById(Long.valueOf(id)));

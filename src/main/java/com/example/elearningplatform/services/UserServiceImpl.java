@@ -36,24 +36,6 @@ public class UserServiceImpl implements UserService {
         return userSet;
     }
 
-    @Override
-    public User findById(Long l) {
-
-        Optional<User> userOprional = userRepository.findById(l);
-
-        if (!userOprional.isPresent()) {
-            throw new RuntimeException("User Not Found! For id value: " + l.toString());
-        }
-        return userOprional.get();
-    }
-
-
-    @Transactional
-    @Override
-    public UserCommand findCommandById(Long l){
-        return userToUserCommand.convert(findById(l));
-    }
-
 
     @Transactional
     @Override

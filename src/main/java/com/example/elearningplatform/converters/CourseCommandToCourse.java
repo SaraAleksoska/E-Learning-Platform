@@ -36,6 +36,7 @@ public class CourseCommandToCourse implements Converter<CourseCommand, Course> {
         course.setDescription(source.getDescription());
         course.setTeacher(source.getTeacher());
         course.setTime(source.getTime());
+        course.setProgress(source.getProgress());
 
         if (source.getUsers() != null && source.getUsers().size() > 0){
             source.getUsers()
