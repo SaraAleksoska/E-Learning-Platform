@@ -9,7 +9,7 @@ import java.util.Set;
 
 public interface PresentationService {
     Set<Presentations> getPresentation();
-    static Presentations findById(Long l);
+    Presentations findById(Long l);
     PresentationCommand findCommandById(Long l);
     PresentationCommand savePresentationCommand(PresentationCommand presentationCommand);
     void deleteById(Long idToDelete);

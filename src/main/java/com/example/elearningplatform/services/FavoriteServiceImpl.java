@@ -64,7 +64,7 @@ public class FavoriteServiceImpl implements FavoriteService {
     }
 
     @Override
-    public void deleteById(Long idToDelete){
+    public void removeById(Long idToDelete){
         favoriteRepository.deleteById(idToDelete);
     }
 }

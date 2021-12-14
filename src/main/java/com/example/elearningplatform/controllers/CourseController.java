@@ -7,13 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
-@Controller
+@RestController
 public class CourseController {
     private final CourseService courseService;
 
@@ -21,7 +18,7 @@ public class CourseController {
         this.courseService = courseService;
     }
 
-    @GetMapping("/course/{id}/show")
+    @GetMapping("/course/show")
     public String showById(@PathVariable String id, Model model){
         model.addAttribute("course", courseService.findById(Long.valueOf(id)));
         return "course/show";
@@ -34,7 +31,7 @@ public class CourseController {
         return "course/courseform";
     }
 
-    @GetMapping("course/{id}/update")
+    @GetMapping("course/update")
     public String updateCourse (@PathVariable String id, Model model){
         model.addAttribute("course", courseService.findCommandById(Long.valueOf(id)));
         return "course/courseform";
@@ -47,7 +44,7 @@ public class CourseController {
         return "redirect:/course/" + savedCommand.getId() + "/show";
     }
 
-    @GetMapping("course/{id}/delete")
+    @GetMapping("course/delete")
     public String deleteById (@PathVariable String id){
          log.debug("Deleting id: " + id);
 

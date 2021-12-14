@@ -12,12 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserCommandToUser implements Converter<UserCommand, User> {
 
-    private final CourseCommandToCourse courseConverter;
+
     private final DepartmentCommandToDepartment departmentConveter;
     private final PositionCommandToPosition positionConverter;
 
-    public UserCommandToUser(CourseCommandToCourse courseConverter, DepartmentCommandToDepartment departmentConveter, PositionCommandToPosition positionConverter) {
-        this.courseConverter = courseConverter;
+    public UserCommandToUser(DepartmentCommandToDepartment departmentConveter, PositionCommandToPosition positionConverter) {
+
         this.departmentConveter = departmentConveter;
         this.positionConverter = positionConverter;
     }

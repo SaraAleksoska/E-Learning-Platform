@@ -13,5 +13,5 @@ public interface FavoriteService {
     Favorite findById(Long l);
     FavoriteCommand findCommandById(Long l);
     FavoriteCommand saveFavoriteCommand(FavoriteCommand favoriteCommand);
-    void deleteById(Long idToDelete);
+    void removeById(Long idToDelete);
 }
